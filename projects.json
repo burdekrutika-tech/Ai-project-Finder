@@ -1,0 +1,112 @@
+[
+    {
+        "title": "AI Chatbot Assistant",
+        "domain": "Artificial Intelligence",
+        "technology": "Python",
+        "experience": "Intermediate",
+        "difficulty": "Medium",
+        "interest": "AI",
+        "type": "College Project",
+        "description": "An intelligent chatbot that understands user queries and provides useful responses.",
+        "technologies": ["Python", "Flask", "NLP", "AI"]
+    },
+    {
+        "title": "AI Resume Analyzer",
+        "domain": "Artificial Intelligence",
+        "technology": "Python",
+        "experience": "Intermediate",
+        "difficulty": "Medium",
+        "interest": "AI",
+        "type": "Portfolio Project",
+        "description": "An AI system that analyzes resumes and provides suggestions for improving skills and keywords.",
+        "technologies": ["Python", "NLP", "AI"]
+    },
+    {
+        "title": "Student Performance Predictor",
+        "domain": "Machine Learning",
+        "technology": "Python",
+        "experience": "Intermediate",
+        "difficulty": "Medium",
+        "interest": "Education",
+        "type": "Final Year Project",
+        "description": "A machine learning system that predicts student performance using academic data.",
+        "technologies": ["Python", "Machine Learning", "Pandas"]
+    },
+    {
+        "title": "Smart Expense Tracker",
+        "domain": "Web Development",
+        "technology": "Flask",
+        "experience": "Beginner",
+        "difficulty": "Easy",
+        "interest": "Finance",
+        "type": "Mini Project",
+        "description": "A web application for tracking expenses and understanding spending patterns.",
+        "technologies": ["Python", "Flask", "HTML", "CSS"]
+    },
+    {
+        "title": "AI Travel Planner",
+        "domain": "Artificial Intelligence",
+        "technology": "Python",
+        "experience": "Beginner",
+        "difficulty": "Easy",
+        "interest": "Travel",
+        "type": "College Project",
+        "description": "An intelligent travel planner that recommends trips according to budget and interests.",
+        "technologies": ["Python", "Flask", "AI"]
+    },
+    {
+        "title": "Smart Security Monitor",
+        "domain": "Cyber Security",
+        "technology": "Python",
+        "experience": "Advanced",
+        "difficulty": "Hard",
+        "interest": "Automation",
+        "type": "Final Year Project",
+        "description": "A security monitoring system that detects suspicious activities and generates alerts.",
+        "technologies": ["Python", "Cyber Security", "AI"]
+    },
+    {
+        "title": "AI Healthcare Assistant",
+        "domain": "Artificial Intelligence",
+        "technology": "Python",
+        "experience": "Advanced",
+        "difficulty": "Hard",
+        "interest": "Healthcare",
+        "type": "Final Year Project",
+        "description": "An AI based assistant that helps users understand general health information.",
+        "technologies": ["Python", "AI", "NLP"]
+    },
+    {
+        "title": "E-Learning Recommendation System",
+        "domain": "Machine Learning",
+        "technology": "Python",
+        "experience": "Advanced",
+        "difficulty": "Hard",
+        "interest": "Education",
+        "type": "Final Year Project",
+        "description": "A recommendation system that suggests learning resources based on student interests.",
+        "technologies": ["Python", "Machine Learning", "Pandas"]
+    },
+    {
+        "title": "Portfolio Website Generator",
+        "domain": "Web Development",
+        "technology": "HTML CSS",
+        "experience": "Beginner",
+        "difficulty": "Easy",
+        "interest": "Automation",
+        "type": "Portfolio Project",
+        "description": "A tool that helps students create a professional portfolio website.",
+        "technologies": ["HTML", "CSS", "Python"]
+    },
+    {
+        "title": "Cyber Threat Detection System",
+        "domain": "Cyber Security",
+        "technology": "Python",
+        "experience": "Advanced",
+        "difficulty": "Hard",
+        "interest": "AI",
+        "type": "Final Year Project",
+        "description": "An intelligent system that identifies suspicious network activities and potential threats.",
+        "technologies": ["Python", "AI", "Cyber Security"]
+    }
+]

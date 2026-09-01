@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Categories | AI Project Finder</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
+            aria-controls="sideMenu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+        <a href="/" class="logo">
+
+            <span class="logo-icon">
+                ✦
+            </span>
+
+            AI Project Finder
+
+        </a>
+
+
+        <a href="/recommend" class="nav-button">
+
+            🚀 Let's Get Started
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <div id="sideMenu"
+         class="side-menu"
+         aria-hidden="true">
+
+
+        <button
+            class="close-menu"
+            onclick="toggleMenu()"
+            aria-label="Close navigation menu">
+
+            ×
+
+        </button>
+
+
+        <a href="/" class="side-menu-link">
+
+            <span class="menu-icon">
+                🏠
+            </span>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <a href="/recommend" class="side-menu-link">
+
+            <span class="menu-icon">
+                💡
+            </span>
+
+            <span>
+                Find Project Ideas
+            </span>
+
+        </a>
+
+
+        <a href="/results" class="side-menu-link">
+
+            <span class="menu-icon">
+                🔎
+            </span>
+
+            <span>
+                Explore Projects
+            </span>
+
+        </a>
+
+
+        <a href="/categories" class="side-menu-link">
+
+            <span class="menu-icon">
+                🗂️
+            </span>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a href="/how-it-works" class="side-menu-link">
+
+            <span class="menu-icon">
+                ⚙️
+            </span>
+
+            <span>
+                How It Works
+            </span>
+
+        </a>
+
+
+        <a href="/about" class="side-menu-link">
+
+            <span class="menu-icon">
+                ℹ️
+            </span>
+
+            <span>
+                About
+            </span>
+
+        </a>
+
+
+        <a href="/contact" class="side-menu-link">
+
+            <span class="menu-icon">
+                📩
+            </span>
+
+            <span>
+                Contact
+            </span>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================
+         CATEGORIES PAGE
+    ========================== -->
+
+    <main>
+
+        <section class="categories-page">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="categories-header">
+
+                <p class="hero-tag">
+                    ✦ PROJECT CATEGORIES
+                </p>
+
+
+                <h1>
+
+                    Explore Projects
+                    <span>By Category</span>
+
+                </h1>
+
+
+                <p>
+
+                    Explore different technology domains
+                    and discover project ideas that match
+                    your interests and skills.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- CATEGORY GRID -->
+
+            <div class="categories-grid">
+
+
+                <!-- AI -->
+
+                <a href="/recommend"
+                   class="category-card">
+
+                    <div class="category-icon">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Artificial Intelligence
+                        </h2>
+
+                        <p>
+                            AI-powered applications,
+                            intelligent systems and
+                            smart solutions.
+                        </p>
+
+                    </div>
+
+                    <span class="category-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- MACHINE LEARNING -->
+
+                <a href="/recommend"
+                   class="category-card">
+
+                    <div class="category-icon">
+                        🧠
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Machine Learning
+                        </h2>
+
+                        <p>
+                            Build predictive models,
+                            classification systems and
+                            intelligent applications.
+                        </p>
+
+                    </div>
+
+                    <span class="category-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- WEB -->
+
+                <a href="/recommend"
+                   class="category-card">
+
+                    <div class="category-icon">
+                        🌐
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Web Development
+                        </h2>
+
+                        <p>
+                            Create modern websites,
+                            web applications and
+                            interactive platforms.
+                        </p>
+
+                    </div>
+
+                    <span class="category-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- APP -->
+
+                <a href="/recommend"
+                   class="category-card">
+
+                    <div class="category-icon">
+                        📱
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            App Development
+                        </h2>
+
+                        <p>
+                            Develop useful mobile
+                            applications for Android
+                            and other platforms.
+                        </p>
+
+                    </div>
+
+                    <span class="category-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- DATA SCIENCE -->
+
+                <a href="/recommend"
+                   class="category-card">
+
+                    <div class="category-icon">
+                        📊
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Data Science
+                        </h2>
+
+                        <p>
+                            Analyze data, create visualizations
+                            and build data-driven solutions.
+                        </p>
+
+                    </div>
+
+                    <span class="category-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- CYBER SECURITY -->
+
+                <a href="/recommend"
+                   class="category-card">
+
+                    <div class="category-icon">
+                        🔐
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Cyber Security
+                        </h2>
+
+                        <p>
+                            Build security tools,
+                            monitoring systems and
+                            protection solutions.
+                        </p>
+
+                    </div>
+
+                    <span class="category-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- IOT -->
+
+                <a href="/recommend"
+                   class="category-card">
+
+                    <div class="category-icon">
+                        📡
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Internet of Things
+                        </h2>
+
+                        <p>
+                            Connect devices and create
+                            smart systems using sensors
+                            and IoT technologies.
+                        </p>
+
+                    </div>
+
+                    <span class="category-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- CLOUD -->
+
+                <a href="/recommend"
+                   class="category-card">
+
+                    <div class="category-icon">
+                        ☁️
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Cloud Computing
+                        </h2>
+
+                        <p>
+                            Explore cloud-based applications,
+                            services and scalable solutions.
+                        </p>
+
+                    </div>
+
+                    <span class="category-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- CTA -->
+
+            <section class="cta-section">
+
+                <h2>
+                    Can't Decide on a Category?
+                </h2>
+
+
+                <p>
+
+                    Tell AI about your skills and interests.
+                    We'll help you find the right project.
+
+                </p>
+
+
+                <a href="/recommend"
+                   class="primary-button">
+
+                    🚀 Let's Get Started →
+
+                </a>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+
+
+    <!-- =========================
+         SIDEBAR JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("sideMenu");
+
+            const button =
+                document.querySelector(".menu-button");
+
+
+            const isOpen =
+                menu.classList.toggle("open");
+
+
+            menu.setAttribute(
+                "aria-hidden",
+                String(!isOpen)
+            );
+
+
+            button.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+
+            button.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
+        }
+
+
+        /* CLOSE WITH ESC */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
+
+                    const menu =
+                        document.getElementById("sideMenu");
+
+                    const button =
+                        document.querySelector(".menu-button");
+
+
+                    menu.classList.remove("open");
+
+
+                    menu.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* CLOSE AFTER LINK CLICK */
+
+        document.querySelectorAll(
+            ".side-menu-link"
+        ).forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    const menu =
+                        document.getElementById("sideMenu");
+
+                    const button =
+                        document.querySelector(".menu-button");
+
+
+                    menu.classList.remove("open");
+
+
+                    menu.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+    </script>
+
+</body>
+
+</html>

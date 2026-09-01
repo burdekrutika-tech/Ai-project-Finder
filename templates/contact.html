@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | AI Project Finder</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
+            aria-controls="sideMenu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+        <a href="/" class="logo">
+
+            <span class="logo-icon">
+                ✦
+            </span>
+
+            AI Project Finder
+
+        </a>
+
+
+        <a href="/recommend" class="nav-button">
+
+            🚀 Let's Get Started
+
+        </a>
+
+    </nav>
+
+
+    <!-- SIDEBAR -->
+
+    <div id="sideMenu"
+         class="side-menu"
+         aria-hidden="true">
+
+        <button
+            class="close-menu"
+            onclick="toggleMenu()"
+            aria-label="Close navigation menu">
+
+            ×
+
+        </button>
+
+
+        <a href="/" class="side-menu-link">
+            <span class="menu-icon">🏠</span>
+            <span>Home</span>
+        </a>
+
+
+        <a href="/recommend" class="side-menu-link">
+            <span class="menu-icon">💡</span>
+            <span>Find Project Ideas</span>
+        </a>
+
+
+        <a href="/results" class="side-menu-link">
+            <span class="menu-icon">🔎</span>
+            <span>Explore Projects</span>
+        </a>
+
+
+        <a href="/categories" class="side-menu-link">
+            <span class="menu-icon">🗂️</span>
+            <span>Categories</span>
+        </a>
+
+
+        <a href="/how-it-works" class="side-menu-link">
+            <span class="menu-icon">⚙️</span>
+            <span>How It Works</span>
+        </a>
+
+
+        <a href="/about" class="side-menu-link">
+            <span class="menu-icon">ℹ️</span>
+            <span>About</span>
+        </a>
+
+
+        <a href="/contact" class="side-menu-link">
+            <span class="menu-icon">📩</span>
+            <span>Contact</span>
+        </a>
+
+    </div>
+
+
+    <!-- CONTACT PAGE -->
+
+    <main>
+
+        <section class="contact-page">
+
+
+            <!-- HEADER -->
+
+            <div class="contact-header">
+
+                <p class="hero-tag">
+                    ✦ GET IN TOUCH
+                </p>
+
+
+                <h1>
+
+                    Let's Talk About
+                    <span>Your Project</span>
+
+                </h1>
+
+
+                <p>
+
+                    Have a question, suggestion or feedback?
+                    Send us a message and we'll be happy to help.
+
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT CONTENT -->
+
+            <div class="contact-container">
+
+
+                <!-- CONTACT INFORMATION -->
+
+                <div class="contact-info">
+
+                    <h2>
+                        Contact Us
+                    </h2>
+
+
+                    <p>
+
+                        We're here to help you discover better
+                        project ideas and make your development
+                        journey easier.
+
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📧
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Email
+                            </h3>
+
+                            <p>
+                                support@aiprojectfinder.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            💡
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Project Help
+                            </h3>
+
+                            <p>
+                                Get help choosing your project
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            💬
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Feedback
+                            </h3>
+
+                            <p>
+                                Share your ideas and suggestions
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-note">
+
+                        <strong>
+                            Have an idea?
+                        </strong>
+
+                        <p>
+
+                            Your feedback can help us improve
+                            AI Project Finder and make it more
+                            useful for students.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT FORM -->
+
+                <div class="contact-form-box">
+
+                    <h2>
+                        Send a Message
+                    </h2>
+
+
+                    {% if success %}
+
+                    <div class="success-message">
+
+                        ✓ Your message has been sent successfully!
+
+                    </div>
+
+                    {% endif %}
+
+
+                    <form
+                        action="/contact"
+                        method="POST">
+
+
+                        <!-- NAME AND EMAIL -->
+
+                        <div class="contact-row">
+
+
+                            <div class="contact-field">
+
+                                <label for="name">
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="contact-field">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="contact-field">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="Enter message subject"
+                                required>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="contact-field">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Write your message here..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <!-- SEND -->
+
+                        <button
+                            type="submit"
+                            class="contact-button">
+
+                            Send Message →
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            ✦ AI Project Finder
+        </div>
+
+
+        <p>
+            AI-Based Project Idea Recommendation System
+        </p>
+
+
+        <p class="copyright">
+            © 2026 AI Project Finder. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- SIDEBAR SCRIPT -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("sideMenu");
+
+            const button =
+                document.querySelector(".menu-button");
+
+
+            const isOpen =
+                menu.classList.toggle("open");
+
+
+            menu.setAttribute(
+                "aria-hidden",
+                String(!isOpen)
+            );
+
+
+            button.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+
+            button.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
+        }
+
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
+
+                    const menu =
+                        document.getElementById("sideMenu");
+
+                    const button =
+                        document.querySelector(".menu-button");
+
+
+                    menu.classList.remove("open");
+
+
+                    menu.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                }
+
+            }
+        );
+
+
+        document.querySelectorAll(
+            ".side-menu-link"
+        ).forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    const menu =
+                        document.getElementById("sideMenu");
+
+                    const button =
+                        document.querySelector(".menu-button");
+
+
+                    menu.classList.remove("open");
+
+
+                    menu.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+    </script>
+
+</body>
+
+</html>

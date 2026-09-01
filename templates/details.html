@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title }} | AI Project Finder</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
+            aria-controls="sideMenu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+        <a href="/" class="logo">
+
+            <span class="logo-icon">
+                ✦
+            </span>
+
+            AI Project Finder
+
+        </a>
+
+
+        <a href="/recommend"
+           class="nav-button">
+
+            🔎 Explore Projects
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================
+         SIDE MENU
+    ========================== -->
+
+    <div id="sideMenu"
+         class="side-menu"
+         aria-hidden="true">
+
+
+        <button
+            class="close-menu"
+            onclick="toggleMenu()"
+            aria-label="Close navigation menu">
+
+            ×
+
+        </button>
+
+
+        <a href="/" class="side-menu-link">
+
+            <span class="menu-icon">
+                🏠
+            </span>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <a href="/recommend" class="side-menu-link">
+
+            <span class="menu-icon">
+                💡
+            </span>
+
+            <span>
+                Find Project Ideas
+            </span>
+
+        </a>
+
+
+        <a href="/results" class="side-menu-link">
+
+            <span class="menu-icon">
+                🔎
+            </span>
+
+            <span>
+                Explore Projects
+            </span>
+
+        </a>
+
+
+        <a href="/categories" class="side-menu-link">
+
+            <span class="menu-icon">
+                🗂️
+            </span>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <a href="/how-it-works" class="side-menu-link">
+
+            <span class="menu-icon">
+                ⚙️
+            </span>
+
+            <span>
+                How It Works
+            </span>
+
+        </a>
+
+
+        <a href="/about" class="side-menu-link">
+
+            <span class="menu-icon">
+                ℹ️
+            </span>
+
+            <span>
+                About
+            </span>
+
+        </a>
+
+
+        <a href="/contact" class="side-menu-link">
+
+            <span class="menu-icon">
+                📩
+            </span>
+
+            <span>
+                Contact
+            </span>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================
+         DETAILS PAGE
+    ========================== -->
+
+    <main class="details-page">
+
+
+        <!-- BACK -->
+
+        <a href="/results"
+           class="back-link">
+
+            ← Back to Projects
+
+        </a>
+
+
+
+        <!-- =========================
+             PROJECT HERO
+        ========================== -->
+
+        <section class="details-hero">
+
+
+            <div class="details-icon">
+
+                🤖
+
+            </div>
+
+
+            <div class="details-title">
+
+
+                <p class="hero-tag">
+
+                    ✦ PROJECT DETAILS
+
+                </p>
+
+
+                <h1>
+                    {{ title }}
+                </h1>
+
+
+                <p>
+
+                    {{ description }}
+
+                </p>
+
+
+                <div class="detail-tags">
+
+
+                    {% if domain %}
+
+                    <span>
+                        🎯 {{ domain }}
+                    </span>
+
+                    {% endif %}
+
+
+                    {% if technology %}
+
+                    <span>
+                        💻 {{ technology }}
+                    </span>
+
+                    {% endif %}
+
+
+                    {% if difficulty %}
+
+                    <span>
+                        ⚡ {{ difficulty }}
+                    </span>
+
+                    {% endif %}
+
+
+                    {% if experience %}
+
+                    <span>
+                        📚 {{ experience }}
+                    </span>
+
+                    {% endif %}
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             DETAILS GRID
+        ========================== -->
+
+        <section class="details-grid">
+
+
+            <!-- =====================
+                 MAIN CONTENT
+            ====================== -->
+
+            <div class="details-main">
+
+
+                <!-- PROJECT OVERVIEW -->
+
+                <div class="details-box">
+
+
+                    <h2>
+
+                        📖 Project Overview
+
+                    </h2>
+
+
+                    <p>
+
+                        {{ details.overview }}
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- =====================
+                     KEY FEATURES
+                ====================== -->
+
+                <div class="details-box">
+
+
+                    <h2>
+
+                        ✨ Key Features
+
+                    </h2>
+
+
+                    {% if details.features %}
+
+                    <ul class="feature-list">
+
+
+                        {% for feature in details.features %}
+
+                        <li>
+                            {{ feature }}
+                        </li>
+
+                        {% endfor %}
+
+
+                    </ul>
+
+                    {% else %}
+
+                    <ul class="feature-list">
+
+                        <li>
+                            Intelligent project functionality
+                        </li>
+
+                        <li>
+                            User-friendly interface
+                        </li>
+
+                        <li>
+                            Automated data processing
+                        </li>
+
+                        <li>
+                            Practical real-world application
+                        </li>
+
+                    </ul>
+
+                    {% endif %}
+
+
+                </div>
+
+
+
+                <!-- =====================
+                     OBJECTIVES
+                ====================== -->
+
+                {% if details.objectives %}
+
+                <div class="details-box">
+
+
+                    <h2>
+
+                        🎯 Project Objectives
+
+                    </h2>
+
+
+                    <ul class="feature-list">
+
+
+                        {% for objective in details.objectives %}
+
+                        <li>
+                            {{ objective }}
+                        </li>
+
+                        {% endfor %}
+
+
+                    </ul>
+
+
+                </div>
+
+                {% endif %}
+
+
+
+                <!-- =====================
+                     MODULES
+                ====================== -->
+
+                {% if details.modules %}
+
+                <div class="details-box">
+
+
+                    <h2>
+
+                        🧩 Project Modules
+
+                    </h2>
+
+
+                    <ul class="module-list">
+
+
+                        {% for module in details.modules %}
+
+                        <li>
+                            {{ module }}
+                        </li>
+
+                        {% endfor %}
+
+
+                    </ul>
+
+
+                </div>
+
+                {% endif %}
+
+
+
+                <!-- =====================
+                     DEVELOPMENT STEPS
+                ====================== -->
+
+                {% if details.development_steps %}
+
+                <div class="details-box">
+
+
+                    <h2>
+
+                        🛠️ Development Steps
+
+                    </h2>
+
+
+                    <ol class="feature-list">
+
+
+                        {% for step in details.development_steps %}
+
+                        <li>
+                            {{ step }}
+                        </li>
+
+                        {% endfor %}
+
+
+                    </ol>
+
+
+                </div>
+
+                {% endif %}
+
+
+
+                <!-- =====================
+                     FUTURE SCOPE
+                ====================== -->
+
+                {% if details.future_scope %}
+
+                <div class="details-box">
+
+
+                    <h2>
+
+                        🚀 Future Scope
+
+                    </h2>
+
+
+                    <p>
+
+                        {{ details.future_scope }}
+
+                    </p>
+
+
+                </div>
+
+                {% endif %}
+
+
+            </div>
+
+
+
+            <!-- =====================
+                 SIDEBAR
+            ====================== -->
+
+            <aside class="details-sidebar">
+
+
+                <!-- PROJECT INFORMATION -->
+
+                <div class="info-card">
+
+
+                    <h3>
+
+                        📌 Project Information
+
+                    </h3>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Domain
+                        </span>
+
+                        <strong>
+                            {{ domain }}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Technology
+                        </span>
+
+                        <strong>
+                            {{ technology }}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Difficulty
+                        </span>
+
+
+                        <strong class="difficulty
+                            {% if difficulty|lower == 'easy' %}
+                                easy
+                            {% elif difficulty|lower == 'hard' %}
+                                hard
+                            {% else %}
+                                medium
+                            {% endif %}">
+
+                            {{ difficulty }}
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>
+                            Experience Level
+                        </span>
+
+                        <strong>
+                            {{ experience }}
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TECHNOLOGIES -->
+
+                {% if technologies %}
+
+                <div class="info-card">
+
+
+                    <h3>
+
+                        💻 Technologies
+
+                    </h3>
+
+
+                    <div class="technology-tags">
+
+
+                        {% for tech in technologies %}
+
+                        <span>
+                            {{ tech }}
+                        </span>
+
+                        {% endfor %}
+
+
+                    </div>
+
+
+                </div>
+
+                {% endif %}
+
+
+
+                <!-- READY TO BUILD -->
+
+                <div class="info-card">
+
+
+                    <h3>
+
+                        🚀 Ready to Build?
+
+                    </h3>
+
+
+                    <p>
+
+                        Start with your project idea and turn it
+                        into a working application.
+
+                    </p>
+
+
+                    <a href="/recommend"
+                       class="primary-button find-another-btn">
+
+                        🔎 Find Another Project →
+
+                    </a>
+
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-logo">
+
+            ✦ AI Project Finder
+
+        </div>
+
+
+        <p>
+
+            AI-Based Project Idea Recommendation System
+
+        </p>
+
+
+        <p class="copyright">
+
+            © 2026 AI Project Finder.
+            All Rights Reserved.
+
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- =========================
+         SIDEBAR JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("sideMenu");
+
+            const button =
+                document.querySelector(".menu-button");
+
+
+            const isOpen =
+                menu.classList.toggle("open");
+
+
+            menu.setAttribute(
+                "aria-hidden",
+                String(!isOpen)
+            );
+
+
+            button.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+
+            button.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
+        }
+
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
+
+                    const menu =
+                        document.getElementById("sideMenu");
+
+                    const button =
+                        document.querySelector(".menu-button");
+
+
+                    menu.classList.remove("open");
+
+
+                    menu.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                }
+
+            }
+        );
+
+
+        document.querySelectorAll(
+            ".side-menu-link"
+        ).forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    const menu =
+                        document.getElementById("sideMenu");
+
+                    const button =
+                        document.querySelector(".menu-button");
+
+
+                    menu.classList.remove("open");
+
+
+                    menu.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About | AI Project Finder</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <!-- HAMBURGER -->
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
+            aria-controls="sideMenu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+        <!-- LOGO -->
+
+        <a href="/" class="logo">
+
+            <span class="logo-icon">
+                ✦
+            </span>
+
+            AI Project Finder
+
+        </a>
+
+
+        <!-- GET STARTED -->
+
+        <a href="/recommend" class="nav-button">
+
+            🚀 Let's Get Started
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================
+         SIDE MENU
+    ========================== -->
+
+    <div id="sideMenu"
+         class="side-menu"
+         aria-hidden="true">
+
+
+        <!-- CLOSE -->
+
+        <button
+            class="close-menu"
+            onclick="toggleMenu()"
+            aria-label="Close navigation menu">
+
+            ×
+
+        </button>
+
+
+        <!-- HOME -->
+
+        <a href="/" class="side-menu-link">
+
+            <span class="menu-icon">
+                🏠
+            </span>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <!-- GET STARTED -->
+
+        <a href="/recommend" class="side-menu-link">
+
+            <span class="menu-icon">
+                🚀
+            </span>
+
+            <span>
+                Let's Get Started
+            </span>
+
+        </a>
+
+
+        <!-- EXPLORE -->
+
+        <a href="/results" class="side-menu-link">
+
+            <span class="menu-icon">
+                🔎
+            </span>
+
+            <span>
+                Explore Projects
+            </span>
+
+        </a>
+
+
+        <!-- CATEGORIES -->
+
+        <a href="/categories" class="side-menu-link">
+
+            <span class="menu-icon">
+                🗂️
+            </span>
+
+            <span>
+                Categories
+            </span>
+
+        </a>
+
+
+        <!-- HOW IT WORKS -->
+
+        <a href="/how-it-works" class="side-menu-link">
+
+            <span class="menu-icon">
+                ⚙️
+            </span>
+
+            <span>
+                How It Works
+            </span>
+
+        </a>
+
+
+        <!-- ABOUT -->
+
+        <a href="/about" class="side-menu-link">
+
+            <span class="menu-icon">
+                ℹ️
+            </span>
+
+            <span>
+                About
+            </span>
+
+        </a>
+
+
+        <!-- CONTACT -->
+
+        <a href="/contact" class="side-menu-link">
+
+            <span class="menu-icon">
+                📩
+            </span>
+
+            <span>
+                Contact
+            </span>
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         ABOUT HERO
+    ========================== -->
+
+    <main>
+
+        <section class="about-hero">
+
+
+            <!-- LEFT -->
+
+            <div class="about-content">
+
+
+                <p class="hero-tag">
+
+                    ✦ ABOUT AI PROJECT FINDER
+
+                </p>
+
+
+                <h1>
+
+                    Build Better Projects
+
+                    <span>
+                        With AI
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    AI Project Finder is an intelligent project
+                    idea recommendation system designed to help
+                    students discover project ideas that match
+                    their skills, interests and experience.
+
+                </p>
+
+
+                <p>
+
+                    Instead of spending hours searching for
+                    suitable project topics, users can simply
+                    select their preferences and get personalized
+                    project recommendations.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- RIGHT AI VISUAL -->
+
+            <div class="about-visual">
+
+
+                <div class="about-ai-box">
+
+
+                    <div class="orbit orbit-one"></div>
+
+                    <div class="orbit orbit-two"></div>
+
+
+                    <div class="about-ai-icon">
+
+                        AI
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             WHY AI PROJECT FINDER
+        ========================== -->
+
+        <section class="about-features">
+
+
+            <div class="section-heading">
+
+
+                <p>
+                    WHY AI PROJECT FINDER
+                </p>
+
+
+                <h2>
+                    Make Project Selection Easier
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="features">
+
+
+                <!-- CARD 1 -->
+
+                <div class="feature-card">
+
+
+                    <div class="feature-icon">
+                        💡
+                    </div>
+
+
+                    <h3>
+                        Smart Ideas
+                    </h3>
+
+
+                    <p>
+
+                        Discover project ideas based on your
+                        selected skills, interests and domain.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- CARD 2 -->
+
+                <div class="feature-card">
+
+
+                    <div class="feature-icon">
+                        🎯
+                    </div>
+
+
+                    <h3>
+                        Personalized Matching
+                    </h3>
+
+
+                    <p>
+
+                        Get recommendations that match your
+                        experience and preferred technology.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- CARD 3 -->
+
+                <div class="feature-card">
+
+
+                    <div class="feature-icon">
+                        ⚡
+                    </div>
+
+
+                    <h3>
+                        Save Time
+                    </h3>
+
+
+                    <p>
+
+                        Quickly find suitable project topics
+                        without searching through many websites.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- CARD 4 -->
+
+                <div class="feature-card">
+
+
+                    <div class="feature-icon">
+                        🚀
+                    </div>
+
+
+                    <h3>
+                        Build With Confidence
+                    </h3>
+
+
+                    <p>
+
+                        Understand project requirements and
+                        choose an idea that fits your skills.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             TECHNOLOGY
+        ========================== -->
+
+        <section class="technology-section">
+
+
+            <div class="section-heading">
+
+
+                <p>
+                    TECHNOLOGY
+                </p>
+
+
+                <h2>
+                    Built With Modern Technologies
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="technology-grid">
+
+
+                <div class="technology-card">
+
+                    <h3>
+                        Python
+                    </h3>
+
+                    <p>
+                        AI and backend logic
+                    </p>
+
+                </div>
+
+
+
+                <div class="technology-card">
+
+                    <h3>
+                        Flask
+                    </h3>
+
+                    <p>
+                        Web application framework
+                    </p>
+
+                </div>
+
+
+
+                <div class="technology-card">
+
+                    <h3>
+                        HTML & CSS
+                    </h3>
+
+                    <p>
+                        Modern user interface
+                    </p>
+
+                </div>
+
+
+
+                <div class="technology-card">
+
+                    <h3>
+                        AI
+                    </h3>
+
+                    <p>
+                        Intelligent recommendations
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="cta-section">
+
+
+            <h2>
+                Ready to Find Your Project?
+            </h2>
+
+
+            <p>
+
+                Tell us your skills and interests.
+                AI will help you discover suitable project ideas.
+
+            </p>
+
+
+            <a href="/recommend"
+               class="primary-button">
+
+                🚀 Let's Get Started →
+
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-logo">
+
+            ✦ AI Project Finder
+
+        </div>
+
+
+        <p>
+
+            AI-Based Project Idea Recommendation System
+
+        </p>
+
+
+        <p class="copyright">
+
+            © 2026 AI Project Finder. All Rights Reserved.
+
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- =========================
+         SIDEBAR JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("sideMenu");
+
+            const button =
+                document.querySelector(".menu-button");
+
+
+            const isOpen =
+                menu.classList.toggle("open");
+
+
+            menu.setAttribute(
+                "aria-hidden",
+                String(!isOpen)
+            );
+
+
+            button.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+
+            button.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
+        }
+
+
+
+        /* CLOSE WITH ESC */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
+
+                    const menu =
+                        document.getElementById("sideMenu");
+
+                    const button =
+                        document.querySelector(".menu-button");
+
+
+                    menu.classList.remove("open");
+
+
+                    menu.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* CLOSE AFTER MENU LINK CLICK */
+
+        document.querySelectorAll(
+            ".side-menu-link"
+        ).forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    const menu =
+                        document.getElementById("sideMenu");
+
+                    const button =
+                        document.querySelector(".menu-button");
+
+
+                    menu.classList.remove("open");
+
+
+                    menu.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
