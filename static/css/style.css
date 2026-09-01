@@ -2886,7 +2886,7 @@ textarea {
 
 /* CATEGORY GRID */
 
-.category-grid {
+.categories-grid {
     max-width: 1200px;
     margin: auto;
 
@@ -3056,7 +3056,7 @@ textarea {
         font-size: 36px;
     }
 
-    .category-grid {
+    .category-grid  {
         grid-template-columns: 1fr;
     }
 
@@ -3777,4 +3777,364 @@ body {
         min-height: 48px !important;
         font-size: 13px !important;
     }
+}
+/* =========================================
+   FINAL CATEGORY PAGE FIX
+========================================= */
+
+.categories-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 6% 80px;
+    box-sizing: border-box;
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(49, 82, 232, 0.12),
+            transparent 30%
+        ),
+        #f7f8fd;
+}
+
+.categories-header {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.categories-header h1 {
+    margin: 10px 0 15px;
+    color: #111936;
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+.categories-header h1 span {
+    color: #3152e8;
+}
+
+.categories-header p {
+    color: #68718a;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* CATEGORY GRID */
+
+.category-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+/* CATEGORY CARD */
+
+.category-card {
+    width: 100%;
+    min-width: 0;
+
+    padding: 30px 22px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 1px solid #e1e5f0;
+    border-radius: 16px;
+
+    text-decoration: none;
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c4cdf5;
+
+    box-shadow:
+        0 18px 40px
+        rgba(31, 49, 125, 0.12);
+}
+
+/* ICON */
+
+.category-card .category-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    background: #eef1ff;
+
+    font-size: 27px;
+}
+
+/* TITLE */
+
+.category-card h2 {
+    margin: 0 0 10px;
+
+    color: #182044;
+
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+/* DESCRIPTION */
+
+.category-card p {
+    margin: 0 0 18px;
+
+    color: #68718a;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* EXPLORE LINK */
+
+.category-card .category-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+
+    margin: 0 auto;
+
+    color: #3152e8;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+/* CTA */
+
+.categories-cta {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 60px auto 0;
+    padding: 55px 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111d70,
+            #3152e8
+        );
+
+    color: #ffffff;
+}
+
+.categories-cta h2 {
+    margin: 0 0 12px;
+
+    font-size: 30px;
+}
+
+.categories-cta p {
+    margin: 0 0 25px;
+
+    color: #dce2ff;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.categories-cta .primary-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 235px;
+    height: 58px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+    color: #17256f;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .categories-page {
+        padding: 50px 5% 60px;
+    }
+
+    .categories-header h1 {
+        font-size: 36px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-cta {
+        padding: 40px 20px;
+    }
+
+    .categories-cta h2 {
+        font-size: 25px;
+    }
+
+}
+/* ABOUT PAGE FIX */
+
+.about-features {
+    padding: 80px 6%;
+    background: #f7f8fd;
+}
+
+.about-features .section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.about-features .section-heading p {
+    color: #3152e8;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.about-features .section-heading h2 {
+    color: #111936;
+    font-size: 38px;
+    margin: 0;
+}
+
+.about-features .features {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.about-features .feature-card {
+    background: #ffffff;
+    border: 1px solid #e1e5f0;
+    border-radius: 16px;
+
+    padding: 28px 22px;
+
+    box-sizing: border-box;
+
+    transition: 0.3s ease;
+}
+
+.about-features .feature-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(31, 49, 125, 0.12);
+}
+
+.about-features .feature-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef1ff;
+    border-radius: 12px;
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+}
+
+.about-features .feature-card h3 {
+    color: #182044;
+    font-size: 18px;
+
+    margin: 0 0 10px;
+}
+
+.about-features .feature-card p {
+    color: #68718a;
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .about-features .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .about-features {
+        padding: 60px 5%;
+    }
+
+    .about-features .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .about-features .features {
+        grid-template-columns: 1fr;
+    }
+
 }
